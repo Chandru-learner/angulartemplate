@@ -1,0 +1,13 @@
+.admin-page {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(8, 1fr);
+
+  &__menu {
+    grid-column: 1 / span 1;
+  }
+
+  &__page {
+    grid-column: 2 / -1;
+  }
+}

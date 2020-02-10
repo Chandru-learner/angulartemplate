@@ -4,15 +4,19 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
+import { AuthModule } from './auth/auth.module';
+import { AdminModule } from './admin/admin.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
-    CoreModule
+    BrowserModule,    
+    CoreModule,
+    AuthModule,
+    AdminModule,
+    AppRoutingModule, //this must be called last
   ],
   providers: [],
   bootstrap: [AppComponent]

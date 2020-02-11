@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
+import { registerLocaleData } from '@angular/common';
+
+import localeTamil from '@angular/common/locales/ta';
+import localeTelugu from '@angular/common/locales/te';
 
 
 
@@ -22,6 +26,8 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
+    registerLocaleData(localeTamil);
+    registerLocaleData(localeTelugu);
     this.router.navigateByUrl('/login');
   }
 }

@@ -5,19 +5,19 @@
 
 import { Pipe, PipeTransform } from '@angular/core';
 import { formatNumber } from '@angular/common';
-import { SessionService } from '../../core/services/session.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Pipe({
-    name: 'localNumber',
+  name: 'localNumber',
 })
 export class LocalNumberPipe implements PipeTransform {
 
-    constructor(private session: SessionService) { }
+  constructor(protected service: TranslateService) { }
 
-    transform(value: any, format: string) {
-        if (value == null) { return ''; } // !value would also react to zeros.
-        if (!format) { format = '.2-2'; }
+  transform(value: any, format: string) {
+    if (value == null) { return ''; } // !value would also react to zeros.
+    if (!format) { format = '.2-2'; }
 
-        return formatNumber(value, this.session.locale, format);
-    }
+    return formatNumber(value, this.service.currentLang, format);
+  }
 }

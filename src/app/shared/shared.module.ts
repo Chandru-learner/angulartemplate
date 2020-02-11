@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { Directive1Directive } from './directives/directive1.directive';
 import { LocalDatePipe } from './pipes/local-date.pipe';
 import { LocalNumberPipe } from './pipes/local-number.pipe';
-
 
 
 @NgModule({
@@ -19,7 +19,7 @@ import { LocalNumberPipe } from './pipes/local-number.pipe';
     Directive1Directive,
     LocalDatePipe,
     LocalNumberPipe
-  ]
+  ],
 })
 export class SharedModule { }
 

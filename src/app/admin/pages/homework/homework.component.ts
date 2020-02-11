@@ -7,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeworkComponent implements OnInit {
 
-  constructor() { }
+  public cDate: Date;
+
+  constructor() { 
+    this.cDate = new Date();
+  }
 
   ngOnInit() {
   }

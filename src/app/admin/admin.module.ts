@@ -7,12 +7,12 @@ import { AdminRoutingModule } from './admin.routing.module';
 import { DashboardComponent, AdminComponent, HomeworkComponent } from './pages';
 import { SharedModule } from '../shared/shared.module';
 
+
 // AoT requires an exported function for factories
+//This is needed for internationalization
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient);
 }
-
-
 
 @NgModule({
   declarations: [DashboardComponent, AdminComponent, HomeworkComponent],
@@ -28,6 +28,5 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
       }
     }),
   ],
-  providers: [],
 })
 export class AdminModule { }

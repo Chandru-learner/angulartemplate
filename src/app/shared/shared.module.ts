@@ -3,12 +3,13 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { Directive1Directive } from './directives/directive1.directive';
-import { Pipe1Pipe } from './pipes/pipe1.pipe';
+import { LocalDatePipe } from './pipes/local-date.pipe';
+import { LocalNumberPipe } from './pipes/local-number.pipe';
 
 
 
 @NgModule({
-  declarations: [HeaderComponent, FooterComponent, Directive1Directive, Pipe1Pipe],
+  declarations: [HeaderComponent, FooterComponent, Directive1Directive, LocalDatePipe, LocalNumberPipe],
   imports: [
     CommonModule
   ],
@@ -16,7 +17,8 @@ import { Pipe1Pipe } from './pipes/pipe1.pipe';
     HeaderComponent,
     FooterComponent,
     Directive1Directive,
-    Pipe1Pipe
+    LocalDatePipe,
+    LocalNumberPipe
   ]
 })
 export class SharedModule { }

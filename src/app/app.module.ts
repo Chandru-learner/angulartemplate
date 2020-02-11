@@ -12,7 +12,7 @@ import { AdminModule } from './admin/admin.module';
     AppComponent,
   ],
   imports: [
-    BrowserModule,    
+    BrowserModule,
     CoreModule,
     AuthModule,
     AdminModule,

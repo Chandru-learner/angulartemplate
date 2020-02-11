@@ -1,0 +1,9 @@
+{
+  "MENU": {
+    "DASHBOARD": "Dashboard",
+    "HOMEWORK": "Homework"
+  },
+  "HOMEWORK": {
+    "TITLE": "homework works!"
+  }
+}

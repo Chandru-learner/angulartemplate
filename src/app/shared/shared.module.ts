@@ -19,7 +19,7 @@ import { LocalNumberPipe } from './pipes/local-number.pipe';
     Directive1Directive,
     LocalDatePipe,
     LocalNumberPipe
-  ],
+  ]
 })
 export class SharedModule { }
 

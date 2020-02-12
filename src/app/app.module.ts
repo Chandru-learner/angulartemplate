@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { AuthModule } from './auth/auth.module';
 import { AdminModule } from './admin/admin.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { AdminModule } from './admin/admin.module';
   imports: [
     BrowserModule,
     CoreModule,
+    SharedModule,
     AuthModule,
     AdminModule,
     AppRoutingModule, //this must be called last

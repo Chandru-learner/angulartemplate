@@ -4,13 +4,16 @@ import { LoginComponent } from './auth/pages';
 
 
 const routes: Routes = [
-  {
-    path: 'login', component: LoginComponent,
-  },
+  { path: '', redirectTo: '', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent },
+  { path: 'not-found', loadChildren: './not-found/not-found.module#NotFoundModule' },
+  { path: '**', redirectTo: 'not-found' }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    initialNavigation: 'enabled',
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

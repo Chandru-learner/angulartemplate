@@ -28,6 +28,9 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     registerLocaleData(localeTamil);
     registerLocaleData(localeTelugu);
+  }
+
+  login() {
     this.router.navigateByUrl('/login');
   }
 }

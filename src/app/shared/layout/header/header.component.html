@@ -3,3 +3,7 @@
   <li (click)="changeLang('ta')">tamil</li>
   <li (click)="changeLang('te')">telugu</li>
 </ul>
+
+<a *ngIf="authService.isLoggedIn() === false" (click)="login()">Login</a>
+<a *ngIf="authService.isLoggedIn() === true" (click)="logout()">Logout</a>
+<hr>

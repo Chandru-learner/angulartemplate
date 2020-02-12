@@ -6,6 +6,7 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { Directive1Directive } from './directives/directive1.directive';
 import { LocalDatePipe } from './pipes/local-date.pipe';
 import { LocalNumberPipe } from './pipes/local-number.pipe';
+import { AuthService } from '../core/services/auth.service';
 
 
 @NgModule({
@@ -19,6 +20,9 @@ import { LocalNumberPipe } from './pipes/local-number.pipe';
     Directive1Directive,
     LocalDatePipe,
     LocalNumberPipe
+  ],
+  providers: [
+    AuthService
   ]
 })
 export class SharedModule { }
